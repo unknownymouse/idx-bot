@@ -1,0 +1,82 @@
+2026-05-11 09:19:13,577 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-11 09:19:14,235 - httpx - INFO - HTTP Request: POST https://api.telegram.org/botMASUKKAN_TOKEN_BOT_KAMU_DI_SINI/getMe "HTTP/1.1 404 Not Found"
+2026-05-11 09:19:14,237 - telegram.ext - ERROR - Network Retry Loop (Bootstrap Initialize Application): Invalid token. Aborting retry loop.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 857, in initialize
+    await self.get_me()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 2008, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 990, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\request\_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.InvalidToken: Not Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_utils\networkloop.py", line 136, in do_action
+    await action_cb()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\ext\_extbot.py", line 316, in initialize
+    await super().initialize()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\telegram\_bot.py", line 860, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: The token `MASUKKAN_TOKEN_BOT_KAMU_DI_SINI` was rejected by the server.
+2026-05-11 09:21:43,207 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-11 09:21:43,768 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getMe "HTTP/1.1 200 OK"
+2026-05-11 09:21:43,953 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/deleteWebhook "HTTP/1.1 200 OK"
+2026-05-11 09:21:43,956 - apscheduler.scheduler - INFO - Added job "daily_scan" to job store "default"
+2026-05-11 09:21:43,956 - apscheduler.scheduler - INFO - Scheduler started
+2026-05-11 09:21:43,956 - telegram.ext.Application - INFO - Application started
+2026-05-11 09:21:54,519 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:01,990 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:03,564 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:04,351 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/sendMessage "HTTP/1.1 200 OK"
+2026-05-11 09:22:13,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:23,941 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:34,127 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:44,315 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:22:54,502 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:23:04,690 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:23:14,889 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:23:25,077 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:23:35,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:23:45,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:23:55,640 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
+2026-05-11 09:24:05,827 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8763806870:AAF9ulkIJmeGxlRzDIl4ikWrPYlcKBhZZLk/getUpdates "HTTP/1.1 200 OK"
